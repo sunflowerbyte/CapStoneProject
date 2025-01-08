@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+body {
+  margin: 0;
+  background-color: rgb(207, 209, 210);
+  font-family: 'Josefin Sans', sans-serif;
+  color: #333;
+}
+
+.nav-title {
+  margin-top: 4rem;
+  color: #1a73e8;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.topnav {
+  background-color: #ffffff;
+  padding: 1rem 0;
+}
+
+.topnav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topnav-list li {
+  margin: 0 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgb(2, 62, 90);
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-link:hover {
+  color: rgb(21, 48, 138);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .topnav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .topnav-list li {
+    margin: 0.5rem 0;
+  }
+}
