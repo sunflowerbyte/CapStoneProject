@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Notices = () => {
+function Notices() {
   const [notices, setNotices] = useState([]);
   const token = localStorage.getItem('token');
 
@@ -33,5 +33,6 @@ const Notices = () => {
     </div>
   );
 };
+
 
 export default Notices;

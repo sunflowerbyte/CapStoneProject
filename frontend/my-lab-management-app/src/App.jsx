@@ -5,10 +5,18 @@ import Dashboard from './components/Dashboard';
 import Maintenance from './components/Maintenance';
 import Inventory from './components/Inventory';
 import Notices from './components/Notices';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import default styles
+
+
 
 
 function App() {
   return (
+    <>
+
+    {/*ToastContainer for global notifications*/}
+    <ToastContainer/>
     <Router>
       <Routes>
 
@@ -23,6 +31,7 @@ function App() {
         <Route path="/notices" element={<Notices />} />
       </Routes>
     </Router>
+    </>
   );
 }
 

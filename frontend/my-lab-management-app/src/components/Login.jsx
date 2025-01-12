@@ -5,7 +5,7 @@ import '../Login.css'
 
 
 
-const Login = () => {
+function Login () {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');

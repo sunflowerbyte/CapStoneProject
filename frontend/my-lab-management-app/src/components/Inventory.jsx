@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Inventory = () => {
+function Inventory () {
   const [inventory, setInventory] = useState([]);
   const token = localStorage.getItem('token');
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { registerUser } from '../api'; // Import the registerUser function
 
-const Register = () => {
+function Register () {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Maintenance = () => {
+function Maintenance () {
   const [requests, setRequests] = useState([]);
   const token = localStorage.getItem('token');
 
