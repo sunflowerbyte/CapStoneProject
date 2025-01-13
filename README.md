@@ -25,8 +25,18 @@
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repo.git
+   git clone https://github.com/sunflowerbyte/CapStoneProject.git
 
+2. Install dependencies:
+   ```bash
+   npm install
+
+3. Set up environment variables:
+   ```makefile
+   MONGO_URI=your-mongodb-connection-string 
+   JWT_SECRET=your-secret-key
+
+4. 
 
 
 
