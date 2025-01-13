@@ -64,7 +64,7 @@ You can copy-paste this directly into your `README.md`. Let me know if you need 
     cd frontend
     npm install
     npm run dev
-
+    ```
 
 
 ## 📖 Usage
