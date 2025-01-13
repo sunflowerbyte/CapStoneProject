@@ -27,22 +27,41 @@
    ```bash
    git clone https://github.com/sunflowerbyte/CapStoneProject.git
 
-2. Install dependencies:
-   ```bash
-   npm install
-
-3. Set up environment variables:
+2. Set up environment variables:
    ```makefile
-   MONGO_URI=your-mongodb-connection-string 
-   JWT_SECRET=your-secret-key
+   DB_URI=mongodb://localhost:27017/Laboratory
+   JWT_SECRET=your_jwt_secret
+   PORT=8080
 
-4. 
+3. Run frontend and backend:
+   <p>Backend:</p>
+   
+   ```bash
+   cd backend
+   npm install
+   npm start
+
+   <p>Frontend:</p>
+   
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
 
 
 
+## 📖 Usage
+
+1. Navigate to the (https://http://localhost:5173/).
+2. Log in using your credentials.
+3. Explore features:
+   - Manage and order consumables under the "Inventory" tab.
+   - Check logged maintenance requests and submit new requests under the "Maintenance" tab.
+   - Check the thread of new and previous announcements under the "Notices" tab. 
+4. Enjoy seamless lab management!
 
 
-</ol>
+
 
 
 		
