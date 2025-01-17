@@ -47,7 +47,7 @@ const addReplyToNotice = async (req, res) => {
     const reply = {
       _id: new mongoose.Types.ObjectId(),
       text,
-      repliedBy: req.user || { name: 'Anonymous' }, // Example for user context
+      repliedBy: req.user || { name: 'Anonymous' },
       createdAt: new Date(),
     };
 

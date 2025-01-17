@@ -1,9 +1,9 @@
 /* Container */
 .notices-container {
-    max-width: 80%; /* Limit table width */
-    margin: 2rem auto; /* Center the table and add spacing */
+    max-width: 80%; 
+    margin: 2rem auto; 
     padding: 1.5rem;
-    background-color: #d0d9dcfb; /* Light background for contrast */
+    background-color: #d0d9dcfb; 
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -11,8 +11,8 @@
   
   /* Table Headers */
   .notices-container .p-datatable-thead > tr > th {
-    background-color: #042d4d; /* Light blue header background */
-    color: #ffffff; /* White text */
+    background-color: #042d4d; 
+    color: #ffffff; 
     text-align: center;
   }
   
@@ -69,31 +69,31 @@
   
   /* Style the row toggler (expand/collapse button) */
 .p-row-toggler {
-    background-color: #768fb5; /* Navy blue background */
-    border: none; /* Remove border */
-    color: #ffffff; /* White text/icon */
-    border-radius: 4px; /* Slightly rounded edges */
-    padding: 5px; /* Add padding for better click area */
+    background-color: #768fb5; 
+    border: none;
+    color: #ffffff; 
+    border-radius: 4px; 
+    padding: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   /* Style on hover */
   .p-row-toggler:hover {
-    background-color: #7287b3; /* Darker navy blue on hover */
+    background-color: #7287b3; 
   }
   
   /* Customize the link appearance */
   .p-link {
-    color: #0c1a2d; /* Blue link color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make it bold */
+    color: #0c1a2d; 
+    text-decoration: none; 
+    font-weight: bold; 
     transition: color 0.3s ease;
   }
   
   /* Change link color on hover */
   .p-link:hover {
-    color: #0046ad; /* Darker blue on hover */
-    text-decoration: underline; /* Add underline */
+    color: #0046ad; 
+    text-decoration: underline;
   }
   

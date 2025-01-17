@@ -7,7 +7,7 @@ import { equipment } from "./EquipmentList";
 import "primereact/resources/themes/saga-blue/theme.css";
 import "primeicons/primeicons.css";
 import { format } from "date-fns";
-import "../Maintenance.css";
+import "../CSS/Maintenance.css";
 import BackButton from "./BackButton";
 
 function Maintenance() {

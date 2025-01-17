@@ -6,9 +6,9 @@ body {
 }
 
 /* Header */
-/* Style for the dashboard container */
 .dashboard-container {
-  margin: 8rem 9rem; /* Add some padding to the dashboard */
+  width: 80%; 
+  margin: 8rem 9rem; 
   text-align: center;
   background-color: #ffffff;
   border-radius: 8px;
@@ -18,27 +18,27 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  justify-content: space-between; /* Push the sign-out button to the bottom */
+  justify-content: space-between; 
 }
 
 /* Style for the dashboard title */
 .nav-title {
   display: flex;
-  align-items: center; /* Align items vertically */
-  justify-content: center; /* Center items horizontally */
+  align-items: center; 
+  justify-content: center; 
   font-family: 'Outfit' ;
   font-weight: 600;
   font-size: 2.5rem;
-  color: #0c062b; /* Adjust color for better visibility */
-  gap: 1rem; /* Add space between the logo and the text */
+  color: #0c062b; 
+  gap: 1rem; 
   font-weight: bold;
 }
 
 /* Style for the dashboard logo image */
 .nav-title .login-image {
-  height: 5rem; /* Adjust height */
-  width: auto; /* Maintain aspect ratio */
-  vertical-align: middle; /* Align with text */
+  height: 5rem; 
+  width: auto; 
+  vertical-align: middle;
 }
 
 /* Navigation */
@@ -95,10 +95,10 @@ main {
 
 /* Sign-Out Button */
 .sign-out-button {
-  width: 100%; /* Full width */
-  max-width: 200px; /* Limit the button width */
-  margin: .5rem auto; /* Center and add spacing */
-  background-color: #a73d35; /* Red background */
+  width: 100%; 
+  max-width: 200px; 
+  margin: .5rem auto; 
+  background-color: #a73d35; 
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -111,12 +111,12 @@ main {
 }
 
 .sign-out-button:hover {
-  background-color: #a33a3a; /* Darker red on hover */
-  transform: scale(1.05); /* Slight zoom on hover */
+  background-color: #b34646; 
+  transform: scale(1.05); 
 }
 
 .sign-out-button:active {
-  transform: scale(1); /* Reset zoom when clicked */
+  transform: scale(1); 
 }
 
 /* Media Query for Smaller Screens */

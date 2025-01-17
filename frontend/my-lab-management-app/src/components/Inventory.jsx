@@ -7,37 +7,44 @@ import InventoryRequestForm from "./InventoryRequestForm";
 import { format } from "date-fns";
 import { Tag } from "primereact/tag";
 import BackButton from "./BackButton";
-import "../Inventory.css";
+import "../CSS/Inventory.css";
 
 function Inventory() {
   const [inventory, setInventoryRequest] = useState([]);
-  const [error, setError] = useState(""); // For error handling
+  const [error, setError] = useState(""); //Error handling
   const token = localStorage.getItem("token");
 
   //Fetch
   useEffect(() => {
     const fetchInventory = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/inventory", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const response = await axios.get(
+          "http://localhost:8080/api/inventory",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
 
-// Debugging log
-        console.log("Fetched Inventory Data:", response.data); 
+        // Debugging
+        console.log("Fetched Inventory Data:", response.data);
 
-//Mapping response data
+        //Mapping response data
         const enrichedRequest = response.data.map((request) => {
-          const consumableItem = consumables.find((item) => item.id === request.consumableId);
+          const consumableItem = consumables.find(
+            (item) => item.id === request.consumableId
+          );
 
-          let formattedDate = "N/A"; // Default fallback if `createdAt` is invalid
+          let formattedDate = "N/A";
           try {
             if (request.createdAt) {
-              formattedDate = format(new Date(request.createdAt), "dd/MM/yyyy HH:mm");
+              formattedDate = format(
+                new Date(request.createdAt),
+                "dd/MM/yyyy HH:mm"
+              );
             }
           } catch (error) {
             console.error("Error formatting date:", request.createdAt, error);
           }
-        
 
           return {
             ...request,
@@ -58,11 +65,10 @@ function Inventory() {
     fetchInventory();
   }, [token]);
 
-
-  const handleRequestAdded = (newRequest) => {const consumableItem = consumables.find(
+  const handleRequestAdded = (newRequest) => {
+    const consumableItem = consumables.find(
       (item) => item.id === newRequest.consumableId
     );
-
 
     const enrichedRequest = {
       ...newRequest,
@@ -105,17 +111,20 @@ function Inventory() {
           field="status"
           header="Status"
           body={(rowData) => (
-            <Tag value={rowData.status} severity={getSeverity(rowData.status)} />
+            <Tag
+              value={rowData.status}
+              severity={getSeverity(rowData.status)}
+            />
           )}
           sortable
         />
       </DataTable>
       <div className="form-and-back-button">
-      <InventoryRequestForm onRequestAdded={handleRequestAdded} />
-      <BackButton />
+        <InventoryRequestForm onRequestAdded={handleRequestAdded} />
+        <BackButton />
+      </div>
     </div>
-  </div>
-);
+  );
 }
 
 export default Inventory;

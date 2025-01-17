@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import axios from "axios";
-import { consumables } from "./ConsumablesList"; // Import consumables array
+import { consumables } from "./ConsumablesList";
 import PropTypes from "prop-types";
 import { Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
@@ -9,17 +9,16 @@ import { Toast } from "primereact/toast";
 import { InputTextarea } from "primereact/inputtextarea";
 import { InputNumber } from "primereact/inputnumber";
 import { RadioButton } from "primereact/radiobutton";
-import "../RequestForm.css"; // Add custom CSS for styling
+import "../CSS/RequestForm.css";
 
 function InventoryRequestForm({ onRequestAdded }) {
   const [selectedConsumable, setSelectedConsumable] = useState(null);
-  const [quantity, setQuantity] = useState(1); // Default quantity
+  const [quantity, setQuantity] = useState(1);
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("Urgent");
   const [dialogVisible, setDialogVisible] = useState(false);
-  const toast = useRef(null); // Use useRef instead of useState
+  const toast = useRef(null);
   const token = localStorage.getItem("token");
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,7 +43,6 @@ function InventoryRequestForm({ onRequestAdded }) {
 
     console.log("Submitting Payload:", newRequest); // Debugging log
 
-
     try {
       const response = await axios.post(
         "http://localhost:8080/api/inventory",
@@ -56,13 +54,10 @@ function InventoryRequestForm({ onRequestAdded }) {
 
       console.log("Response Data:", response.data.item); // Debugging log
 
-
-      // Notify parent about the new request
       if (onRequestAdded) {
         onRequestAdded(response.data.data);
       }
 
-      // Reset form and close dialog
       setSelectedConsumable(null);
       setQuantity(1);
       setDescription("");
@@ -99,7 +94,7 @@ function InventoryRequestForm({ onRequestAdded }) {
 
   return (
     <div className="custom-dialog">
-      <Toast ref={toast} /> {/* Pass ref properly */}
+      <Toast ref={toast} />
       <Button
         label="New Inventory Request"
         icon="pi pi-plus"
@@ -153,21 +148,22 @@ function InventoryRequestForm({ onRequestAdded }) {
           </div>
           <div>
             <div>
-            <label>Urgent </label>
-            <RadioButton
-              inputId="status1"
-              value="Urgent"
-              onChange={(e) => setStatus(e.target.value)} // Use e.target.value
-              checked={status === "Urgent"}
-            />
+              <label>Urgent </label>
+              <RadioButton
+                inputId="status1"
+                value="Urgent"
+                onChange={(e) => setStatus(e.target.value)}
+                checked={status === "Urgent"}
+              />
             </div>
-            <div><label> Routine</label>
-            <RadioButton
-              inputId="status2"
-              value="Routine"
-              onChange={(e) => setStatus(e.target.value)} // Use e.target.value
-              checked={status === "Routine"}
-            />
+            <div>
+              <label> Routine</label>
+              <RadioButton
+                inputId="status2"
+                value="Routine"
+                onChange={(e) => setStatus(e.target.value)}
+                checked={status === "Routine"}
+              />
             </div>
           </div>
         </form>

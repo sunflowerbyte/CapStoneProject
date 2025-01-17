@@ -6,6 +6,6 @@ const MaintenanceSchema = new mongoose.Schema({
   priority: { type: String, enum: ["Low", "Medium", "High"], required: true },
   status: { type: String, enum: ["Pending", "In Progress", "Completed"], required: true },
 },
-{ timestamps: true } // Automatically includes createdAt and updatedAt fields
+{ timestamps: true } 
 );
 module.exports = mongoose.model('Maintenance', MaintenanceSchema);

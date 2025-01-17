@@ -8,14 +8,14 @@ import { Button } from "primereact/button";
 import { Dropdown } from "primereact/dropdown";
 import { InputTextarea } from "primereact/inputtextarea";
 import { FloatLabel } from "primereact/floatlabel";
-import "../RequestForm.css";
+import "../CSS/RequestForm.css";
 
 function MaintenanceRequestForm({ onRequestAdded }) {
   const [selectedEquipment, setSelectedEquipment] = useState(null);
   const [description, setDescription] = useState("");
   const [priority, setPriority] = useState("Low");
   const [dialogVisible, setDialogVisible] = useState(false);
-  const toast = useRef(null); // Use useRef for Toast
+  const toast = useRef(null); //for Toast
   const token = localStorage.getItem("token");
 
   const handleSubmit = async (e) => {
@@ -87,10 +87,9 @@ function MaintenanceRequestForm({ onRequestAdded }) {
 
   return (
     <div>
-        
       <Toast ref={toast} />
       <Button
-      className="back-button"
+        className="back-button"
         label="Add Maintenance Request"
         icon="pi pi-plus"
         onClick={() => setDialogVisible(true)}

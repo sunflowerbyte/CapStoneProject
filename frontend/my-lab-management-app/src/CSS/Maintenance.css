@@ -11,8 +11,8 @@
   
   /* Table Headers */
   .p-datatable-thead > tr > th {
-    background-color: #042d4d; /* Light blue header background */
-    color: #ffffff; /* White text */
+    background-color: #042d4d; 
+    color: #ffffff; 
     text-align: center !important;
   }
   

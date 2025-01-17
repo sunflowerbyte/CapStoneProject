@@ -3,14 +3,14 @@ import axios from "axios";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Button } from "primereact/button";
-import "../Notices.css"; // Import your CSS file
+import "../CSS/Notices.css";
 import BackButton from "./BackButton";
 
 const Notices = () => {
   const [notices, setNotices] = useState([]);
-  const [expandedRows, setExpandedRows] = useState(null); // For expanding rows
-  const [replyText, setReplyText] = useState(""); // For new reply
-  const [selectedNotice, setSelectedNotice] = useState(null); // For reply focus
+  const [expandedRows, setExpandedRows] = useState(null);
+  const [replyText, setReplyText] = useState("");
+  const [selectedNotice, setSelectedNotice] = useState(null);
   const token = localStorage.getItem("token");
 
   useEffect(() => {
@@ -66,7 +66,8 @@ const Notices = () => {
         <ul>
           {notice.replies.map((reply, index) => (
             <li key={index}>
-              <strong>{reply.repliedBy?.name || "Anonymous"}:</strong> {reply.text}
+              <strong>{reply.repliedBy?.name || "Anonymous"}:</strong>{" "}
+              {reply.text}
             </li>
           ))}
         </ul>

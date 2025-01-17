@@ -28,11 +28,11 @@
   .equipment-image {
     width: 100%;
     height: 100px;
-    object-fit: scale-down; /* Keeps the image proportionate */
+    object-fit: scale-down; 
     border-radius: 2px;
   }
   
-  /* Typography */
+
   .equipment-card h3 {
     margin: 10px 0 5px;
     font-size: 18px;
@@ -48,9 +48,9 @@
   @media (min-width: 768px) {
     .equipment-grid {
         display: grid;
-        grid-template-columns: repeat(1); /* Two columns */
-         max-width: 500px; /* Increase the grid width for larger screens */
-      gap: 15px; /* Slightly increase the spacing */
+        grid-template-columns: repeat(1);
+         max-width: 500px; 
+      gap: 15px;
     }
   }
   

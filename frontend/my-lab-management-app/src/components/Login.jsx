@@ -1,25 +1,24 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { loginUser } from '../api';
-import '../Login.css';
-import LabChecksLogo from '../assets/LabChecksLogo.svg'; // Import the logo
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { loginUser } from "../api";
+import "../CSS/Login.css";
+import LabChecksLogo from "../assets/LabChecksLogo.svg";
 function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
-  const [showContactIT, setShowContactIT] = useState(false); // State for the "Contact IT" modal
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const [showContactIT, setShowContactIT] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await loginUser({ username, password }); // Call the API
-      localStorage.setItem('token', response.token); // Save JWT token
-      setMessage('Login successful!');
-      navigate('/dashboard');
+      const response = await loginUser({ username, password });
+      localStorage.setItem("token", response.token); // JWT token
+      setMessage("Login successful!");
+      navigate("/dashboard");
     } catch (error) {
-      setMessage(error.response?.data?.message || 'Login failed');
+      setMessage(error.response?.data?.message || "Login failed");
     }
   };
 
@@ -59,13 +58,18 @@ function Login() {
               className="form-input"
             />
           </div>
-          <button type="submit" className="form-button">Login</button>
+          <button type="submit" className="form-button">
+            Login
+          </button>
         </form>
         {message && <p className="login-message">{message}</p>}
         <div className="forgot-password">
           <p>
-            <span onClick={handleForgotPassword} className="forgot-password-link">
-            Forgot your password?{' '}
+            <span
+              onClick={handleForgotPassword}
+              className="forgot-password-link"
+            >
+              Forgot your password?{" "}
             </span>
           </p>
         </div>
@@ -80,7 +84,7 @@ function Login() {
           <div className="contact-it-content">
             <h3>Contact IT Support</h3>
             <p>
-              If you are unable to log in, please contact IT support at{' '}
+              If you are unable to log in, please contact IT support at{" "}
               <a href="mailto:support@labchecks.com">support@labchecks.com</a>.
             </p>
             <button onClick={closeContactITModal} className="close-button">

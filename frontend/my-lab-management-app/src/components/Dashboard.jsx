@@ -1,18 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
-import "../Dashboard.css";
+import "../CSS/Dashboard.css";
 import Equipment from "./Equipment";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
 import { format } from "date-fns";
-import LabChecksLogo from "../assets/LabChecksLogo.svg"; // Import the logo
-
+import LabChecksLogo from "../assets/LabChecksLogo.svg";
 const customId = "custom-id-yes";
 
 function Dashboard() {
   const navigate = useNavigate();
 
   const handleSignOut = () => {
-    localStorage.removeItem("token"); // Clear the token
+    localStorage.removeItem("token");
     navigate("/"); // Redirect to login page
   };
 
@@ -44,7 +43,11 @@ function Dashboard() {
       <div className="dashboard-container">
         <header>
           <h1 className="nav-title">
-            <img className="login-image" src={LabChecksLogo} alt="Lab Checks Logo" />
+            <img
+              className="login-image"
+              src={LabChecksLogo}
+              alt="Lab Checks Logo"
+            />
             DASHBOARD
           </h1>
         </header>

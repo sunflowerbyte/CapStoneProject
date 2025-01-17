@@ -15,7 +15,8 @@ const app = express();
 app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 dbConnect();
-app.options("*", cors()); // Handle preflight requests
+app.options("*", cors()); 
+
 // Routes
 app.get('/', (req, res) => res.send('Server is running!'));
 

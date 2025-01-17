@@ -1,9 +1,9 @@
 /* Inventory Container */
 .inventory-container {
-  max-width: 80%; /* Limit table width */
-  margin: 2rem auto; /* Center the table and add spacing */
+  max-width: 80%; 
+  margin: 2rem auto;
   padding: 1.5rem;
-  background-color: #d0d9dcfb; /* Light background for contrast */
+  background-color: #d0d9dcfb; 
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -11,8 +11,8 @@
 
 /* Table Headers */
 .inventory-container .p-datatable-thead > tr > th {
-  background-color: #042d4d; /* Light blue header background */
-  color: #ffffff; /* White text */
+  background-color: #042d4d; 
+  color: #ffffff; 
   text-align: center;
 }
 

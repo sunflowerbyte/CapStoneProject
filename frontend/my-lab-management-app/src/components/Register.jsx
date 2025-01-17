@@ -1,18 +1,18 @@
-import { useState } from 'react';
-import { registerUser } from '../api'; // Import the registerUser function
+import { useState } from "react";
+import { registerUser } from "../api";
 
-function Register () {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+function Register() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await registerUser({ username, password }); // Call the API
-      setMessage(response.data.message); // Show success message
+      const response = await registerUser({ username, password });
+      setMessage(response.data.message);
     } catch (error) {
-      setMessage(error.response?.data?.message || 'Registration failed');
+      setMessage(error.response?.data?.message || "Registration failed");
     }
   };
 
@@ -39,6 +39,6 @@ function Register () {
       {message && <p>{message}</p>}
     </div>
   );
-};
+}
 
 export default Register;

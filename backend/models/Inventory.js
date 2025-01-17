@@ -5,7 +5,7 @@ const InventorySchema = new mongoose.Schema({
   quantity: { type: Number, required: true },
   status:{type:String, enum:["Urgent", "Routine"], default:"Urgent"}
 },
-{ timestamps: true } // Automatically includes createdAt and updatedAt fields
+{ timestamps: true } 
 );
 
 module.exports = mongoose.model('Inventory', InventorySchema);
