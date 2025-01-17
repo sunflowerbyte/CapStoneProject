@@ -1,0 +1,47 @@
+/* Inventory Container */
+.inventory-container {
+  max-width: 80%; 
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #d0d9dcfb; 
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Headers */
+.inventory-container .p-datatable-thead > tr > th {
+  background-color: #042d4d; 
+  color: #ffffff; 
+  text-align: center;
+}
+
+/* Table Rows */
+.inventory-container .p-datatable-tbody > tr > td {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .inventory-container {
+    padding: 1rem;
+    max-width: 95%;
+  }
+}
+
+/* Inventory Form and Back Button Alignment */
+.inventory-container .form-and-back-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}

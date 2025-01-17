@@ -12,15 +12,36 @@ const getAllMaintenanceRequests = async (req, res) => {
 
 // Create a new maintenance request
 const createMaintenanceRequest = async (req, res) => {
-  const { equipmentName, issue } = req.body;
-
   try {
-    const request = new Maintenance({ equipmentName, issue });
-    await request.save();
-    res.status(201).json({ message: 'Maintenance request created successfully!', request });
+    const { equipmentId, description, priority } = req.body;
+
+    // Validate input
+    if (!equipmentId || !description || !priority) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+
+    // Create a new maintenance request
+    const newRequest = new Maintenance({
+      equipmentId,
+      description,
+      priority,
+      status: "Pending", // Default status
+    });
+
+    // Save to the database
+    const savedRequest = await newRequest.save();
+
+    res.status(201).json({
+      message: "Maintenance request created successfully",
+      data: savedRequest,
+    });
   } catch (error) {
-    res.status(500).json({ message: 'Error creating maintenance request', error: error.message });
+    res.status(500).json({
+      message: "Failed to create maintenance request",
+      error: error.message,
+    });
   }
 };
+
 
 module.exports = { getAllMaintenanceRequests, createMaintenanceRequest };

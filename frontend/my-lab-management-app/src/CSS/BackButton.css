@@ -1,0 +1,35 @@
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 1.5rem;}
+  
+  /* Uniform Button Styling */
+  .button-container button, 
+  .button-container .back-button {
+    background-color: #042d4d; 
+    color: #ffffff; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    padding: 0.5rem 1rem; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s, box-shadow 0.3s; 
+  }
+  
+  /* Hover Effects */
+  .button-container button:hover, 
+  .button-container .back-button:hover {
+    background-color: #005bb5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Active State */
+  .button-container button:active, 
+  .button-container .back-button:active {
+    background-color: #003f7f; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
