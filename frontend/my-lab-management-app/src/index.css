@@ -1,14 +1,37 @@
+/* PrimeReact Styles */
+@import "primeicons/primeicons.css"; /* Icons */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+
+body {
+  background-color: #5f3030; /* Background color */
+  background-image: url('/path/to/your/image.jpg'); /* Optional background image */
+  background-size: cover; /* Fullscreen image */
+  background-repeat: no-repeat; /* Prevent repetition */
+  background-attachment: fixed; /* Fixed when scrolling */
+  color: #211f1f; /* White text color for dark background */
+  font-family: 'Lexend', Arial, sans-serif; /* Primary font */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it fills the viewport */
+  line-height: 1.5; /* Improved readability */
+}
 
 
 :root {
-  font-family: 'Josefin Sans';
-  line-height: 1.5;
-  font-weight: 400;
+  --primary-color: #131661;
+  --secondary-color: #161627;
+  --background-dark: #242424;
+  --background-light: #ffffff;
+  --text-dark: rgba(0, 0, 0, 0.87);
+  --text-light: #ffffff;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  font-family: 'Josefin Sans', Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,19 +40,37 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--secondary-color);
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 100px;
-  min-height: 100vh;
+button {
+  border-radius: 3px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: yellow;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+button:hover {
+  border-color: rgb(99, 153, 184);
+
+}
+button:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1em;
+  font-weight: 700;
+  color: var(--text-light);
 }
 
 h1 {
@@ -37,34 +78,30 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --background-dark: #ffffff;
+    --text-light: #213547;
+  }
+  body {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+  }
+  button {
+    background-color: #f9f9f9;
+    color: var(--text-dark);
   }
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
-  }
 }
+
+.container {
+  max-width: 1200px; /* Restrict maximum width */
+  margin: 0 auto; /* Center horizontally */
+  padding: 2rem; /* Add space around the content */
+  background: rgba(255, 255, 255, 0.05); /* Optional translucent background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+

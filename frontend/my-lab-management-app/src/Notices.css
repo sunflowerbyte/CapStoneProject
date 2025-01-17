@@ -1,0 +1,99 @@
+/* Container */
+.notices-container {
+    max-width: 80%; /* Limit table width */
+    margin: 2rem auto; /* Center the table and add spacing */
+    padding: 1.5rem;
+    background-color: #d0d9dcfb; /* Light background for contrast */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Headers */
+  .notices-container .p-datatable-thead > tr > th {
+    background-color: #042d4d; /* Light blue header background */
+    color: #ffffff; /* White text */
+    text-align: center;
+  }
+  
+  /* Table Rows */
+  .notices-container .p-datatable-tbody > tr > td {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Reply Section */
+  .reply-section {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+  
+  /* Reply List */
+  .reply-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .reply-section ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .reply-section ul li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Buttons */
+  .reply-section .p-button {
+    margin-top: 0.5rem;
+  }
+  
+  .reply-section textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .notices-container {
+      padding: 1rem;
+      max-width: 95%;
+    }
+  }
+  
+  /* Style the row toggler (expand/collapse button) */
+.p-row-toggler {
+    background-color: #768fb5; /* Navy blue background */
+    border: none; /* Remove border */
+    color: #ffffff; /* White text/icon */
+    border-radius: 4px; /* Slightly rounded edges */
+    padding: 5px; /* Add padding for better click area */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style on hover */
+  .p-row-toggler:hover {
+    background-color: #7287b3; /* Darker navy blue on hover */
+  }
+  
+  /* Customize the link appearance */
+  .p-link {
+    color: #0c1a2d; /* Blue link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make it bold */
+    transition: color 0.3s ease;
+  }
+  
+  /* Change link color on hover */
+  .p-link:hover {
+    color: #0046ad; /* Darker blue on hover */
+    text-decoration: underline; /* Add underline */
+  }
+  

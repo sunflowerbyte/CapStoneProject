@@ -1,0 +1,36 @@
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Align buttons to opposite sides */
+    align-items: center; /* Vertically align buttons */
+    margin-bottom: 1.5rem; /* Add spacing below the buttons */
+  }
+  
+  /* Uniform Button Styling */
+  .button-container button, 
+  .button-container .back-button {
+    background-color: #042d4d; /* Match table header background */
+    color: #ffffff; /* White text */
+    border: 1px solid #ddd; /* Subtle border for definition */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0.5rem 1rem; /* Padding for click area */
+    font-size: 1rem; /* Uniform font size */
+    cursor: pointer; /* Indicate clickable */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+  }
+  
+  /* Hover Effects */
+  .button-container button:hover, 
+  .button-container .back-button:hover {
+    background-color: #005bb5; /* Slightly darker blue */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  }
+  
+  /* Active State */
+  .button-container button:active, 
+  .button-container .back-button:active {
+    background-color: #003f7f; /* Even darker blue for active state */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle pressed effect */
+  }
+  

@@ -6,31 +6,26 @@ import Maintenance from './components/Maintenance';
 import Inventory from './components/Inventory';
 import Notices from './components/Notices';
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Import default styles
-
-
-
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <>
+      <ToastContainer />
+      <Router>
+        <Routes>
+          {/* Public Routes */}
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
 
-    {/*ToastContainer for global notifications*/}
-    <ToastContainer/>
-    <Router>
-      <Routes>
+          {/* Protected Routes */}
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/maintenance" element={<Maintenance />} />
+          <Route path="/inventory" element={<Inventory />} />
+          <Route path="/notices" element={<Notices />} />
 
-        {/*Public Routes*/}
-        <Route path="/" element={<Login />} />
-        <Route path='/register' element={<Register/>} />
-
-        {/*Protected Routes*/}
-        <Route path="/dashboard" element={<Dashboard/>} />
-        <Route path="/maintenance" element={<Maintenance />} />
-        <Route path="/inventory" element={<Inventory />} />
-        <Route path="/notices" element={<Notices />} />
-      </Routes>
-    </Router>
+        </Routes>
+      </Router>
     </>
   );
 }

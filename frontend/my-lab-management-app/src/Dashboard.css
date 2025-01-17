@@ -1,22 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap" rel="stylesheet');
 
 body {
-  margin: 0;
-  background-color: rgb(255, 255, 255);
-  font-family: 'Josefin Sans', sans-serif;
-  color: #333;
+ background:linear-gradient(to top, #03045e, #f4791f) ;
 }
 
-.nav-title {
-  margin-top: 4rem;
-  color: #1a73e8;
+/* Header */
+/* Style for the dashboard container */
+.dashboard-container {
+  margin: 8rem 9rem; /* Add some padding to the dashboard */
   text-align: center;
-  font-size: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
 }
 
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between; /* Push the sign-out button to the bottom */
+}
+
+/* Style for the dashboard title */
+.nav-title {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Center items horizontally */
+  font-family: 'Outfit' ;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #0c062b; /* Adjust color for better visibility */
+  gap: 1rem; /* Add space between the logo and the text */
+  font-weight: bold;
+}
+
+/* Style for the dashboard logo image */
+.nav-title .login-image {
+  height: 5rem; /* Adjust height */
+  width: auto; /* Maintain aspect ratio */
+  vertical-align: middle; /* Align with text */
+}
+
+/* Navigation */
 .topnav {
-  background-color: #ffffff;
-  padding: 1rem 0;
+  background-color: #08235b;
+  padding: 1rem;
 }
 
 .topnav-list {
@@ -28,23 +56,70 @@ body {
 }
 
 .topnav-list li {
-  margin: 0 1rem;
+  margin: 0 3rem;
 }
 
 .nav-link {
   text-decoration: none;
-  color: rgb(2, 62, 90);
+  color: rgb(255, 255, 255);
   font-size: 1.2rem;
-  font-weight: bold;
-  transition: color 0.3s, background-color 0.3s;
+  font-weight: normal;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: rgb(21, 48, 138);
-  padding: 0.2rem 0.5rem;
-  border-radius: 5px;
+  color: #e4d936;
 }
 
+/* Toast Notifications */
+.toast-post-date {
+  font-size: 0.85rem;
+  color: #ffffff;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Main Content */
+.dashboard-container {
+  padding: 2rem;
+}
+
+main {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* Sign-Out Button */
+.sign-out-button {
+  width: 100%; /* Full width */
+  max-width: 200px; /* Limit the button width */
+  margin: .5rem auto; /* Center and add spacing */
+  background-color: #a73d35; /* Red background */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.sign-out-button:hover {
+  background-color: #a33a3a; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.sign-out-button:active {
+  transform: scale(1); /* Reset zoom when clicked */
+}
+
+/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
   .topnav-list {
     flex-direction: column;
@@ -53,5 +128,10 @@ body {
 
   .topnav-list li {
     margin: 0.5rem 0;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
 }
