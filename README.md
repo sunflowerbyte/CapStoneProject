@@ -51,6 +51,7 @@
    
     ```bash
     cd frontend
+    cd my-lab-management-app
     npm install
     npm run dev
     ```
